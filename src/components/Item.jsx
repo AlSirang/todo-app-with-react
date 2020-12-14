@@ -4,7 +4,6 @@ export default function Item(props) {
     const [isDone, setIsDone] = useState(false);
     function handelClick(e) {
         setIsDone((preState) => !preState);
-        console.log(e.target.id);
         props.checked(e.target.id);
     }
 

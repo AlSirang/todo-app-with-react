@@ -4,7 +4,9 @@ import Item from "./Item";
 export default function List(props) {
     function deleteItem(itemId) {
         props.setItems((preVal) => {
-            return preVal.filter((val, index) => index !== itemId);
+            return preVal.filter(
+                (val, index) => parseInt(index) !== parseInt(itemId)
+            );
         });
     }
     return (
